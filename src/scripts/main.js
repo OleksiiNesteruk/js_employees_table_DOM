@@ -170,10 +170,10 @@ const formSubmitHandler = (e) => {
     newRow.appendChild(cell);
   });
 
+  newRow.addEventListener('click', () => toggleActiveClass(newRow));
+
   tbody.appendChild(newRow);
   rows.push(newRow);
-
-  newRow.addEventListener('click', () => toggleActiveClass(newRow));
 
   form.reset();
 
